@@ -1,21 +1,18 @@
 package steps;
 
-import cucumber.api.DataTable;
-import cucumber.api.PendingException;
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
-import io.restassured.response.Response;
-import io.restassured.response.ResponseOptions;
-import utilities.RestAssuredExtension;
+import static org.hamcrest.CoreMatchers.hasItem;
 
 import java.util.HashMap;
 import java.util.List;
 
 import org.hamcrest.Matcher;
 
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.CoreMatchers.hasItem;
-import static org.hamcrest.MatcherAssert.assertThat;
+import io.cucumber.datatable.DataTable;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.restassured.response.Response;
+import io.restassured.response.ResponseOptions;
+import utilities.RestAssuredExtension;
 
 public class GETPostsSteps {
 
@@ -51,11 +48,11 @@ public class GETPostsSteps {
     @Given("^I perform authentication operation for \"([^\"]*)\" with body$")
     public void iPerformAuthenticationOperationForWithBody(String url, DataTable table) throws Throwable {
 
-        List<List<String>> data = table.raw();
+    //    List<List<String>> data = table.raw();
 
         HashMap<String, String> body = new HashMap();
-        body.put("email", data.get(1).get(0));
-        body.put("password", data.get(1).get(1));
+    //    body.put("email", data.get(1).get(0));
+   //     body.put("password", data.get(1).get(1));
         response = RestAssuredExtension.PostOpsWithBody(url, body);
     }
 }

@@ -1,31 +1,30 @@
 package steps;
 
-import cucumber.api.DataTable;
-import cucumber.api.PendingException;
-import cucumber.api.java.en.And;
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
-import io.restassured.response.Response;
-import io.restassured.response.ResponseOptions;
-import org.hamcrest.core.IsNot;
-import utilities.RestAssuredExtension;
-
-import javax.xml.crypto.Data;
-import java.util.HashMap;
-import java.util.Map;
-
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
+import java.util.HashMap;
+import java.util.Map;
+
+import org.hamcrest.core.IsNot;
+
+import io.cucumber.datatable.DataTable;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.restassured.response.Response;
+import io.restassured.response.ResponseOptions;
+import utilities.RestAssuredExtension;
+
 public class POSTProfileSteps {
 
-    public static ResponseOptions<Response> response;
+ /*   public static ResponseOptions<Response> response;
 
     @Given("^I Perform POST operation for \"([^\"]*)\" with body$")
     public void iPerformPOSTOperationForWithBody(String url, DataTable table) throws Throwable {
 
-        var data = table.raw();
+     //   var data = table.raw();
 
         //Set body
         HashMap<String, String> body = new HashMap<>();
@@ -60,7 +59,7 @@ public class POSTProfileSteps {
 
     @And("^I Perform DELETE operation for \"([^\"]*)\"$")
     public void iPerformDELETEOperationFor(String url, DataTable table) throws Throwable {
-        var data = table.raw();
+    //    var data = table.raw();
 
         Map<String, String> pathParams = new HashMap<>();
         pathParams.put("postid", data.get(1).get(0));
@@ -80,7 +79,7 @@ public class POSTProfileSteps {
 
     @And("^I perform GET operation with path parameter for \"([^\"]*)\"$")
     public void iPerformGETOperationWithPathParameterFor(String url, DataTable table) throws Throwable {
-        var data = table.raw();
+     //   var data = table.raw();
 
         Map<String, String> pathParams = new HashMap<>();
         pathParams.put("postid", data.get(1).get(0));
@@ -90,7 +89,7 @@ public class POSTProfileSteps {
 
     @And("^I Perform PUT operation for \"([^\"]*)\"$")
     public void iPerformPUTOperationFor(String url, DataTable table) throws Throwable {
-        var data = table.raw();
+      //  var data = table.raw();
 
         Map<String, String> body = new HashMap<>();
         body.put("id", data.get(1).get(0));
@@ -103,6 +102,6 @@ public class POSTProfileSteps {
         //Perform post operation
         RestAssuredExtension.PUTOpsWithBodyAndPathParams(url, body, pathParams);
 
-    }
+    } */
 
 }

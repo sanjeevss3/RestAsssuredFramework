@@ -21,8 +21,8 @@ public class RestAssuredExtension {
         RequestSpecBuilder builder = new RequestSpecBuilder();
         builder.setBaseUri("http://localhost:3000");
         builder.setContentType(ContentType.JSON);
-        var requestSpec = builder.build();
-        Request = RestAssured.given().spec(requestSpec);
+    //    var requestSpec = builder.build();
+     //   Request = RestAssured.given().spec(requestSpec);
     }
 
     public static void GetOpsWithPathParameter(String url, Map<String, String> pathParams) {
@@ -48,7 +48,7 @@ public class RestAssuredExtension {
     public static ResponseOptions<Response> GetOpsWithToken(String url, Object object) {
         //Act
         try {
-            Request.header(new Header("Authorization", "Bearer " + object));
+       //     Request.header(new Header("Authorization", "Bearer " + object));
             return Request.get(new URI(url));
         } catch (URISyntaxException e) {
             e.printStackTrace();
